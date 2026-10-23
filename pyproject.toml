@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "action-demo-devops"
+version = "0.1.0"
+description = "A simple demo project for GitHub Actions"
+requires-python = ">=3.9"
+
+[project.scripts]
+demo = "main:main"
+
+[tool.setuptools]
+py-modules = ["main"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
